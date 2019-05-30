@@ -1,30 +1,117 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">
-        <form class="form-horizontal">
-          <span class="heading">用户登录</span>
-          <div class="form-group">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="用户名或电子邮件">
-            <i class="fa fa-user"></i>
+    <div class="col-xs-1 col-xs-offset-9 aTopAndBottom">
+      <a href data-toggle="modal" data-target="#login">
+        <span class="glyphicon glyphicon-log-in"></span>
+        <span id="loginText">登录</span>
+      </a>
+    </div>
+    <!--注册按钮-->
+    <div class="col-xs-1 aTopAndBottom">
+      <a href data-toggle="modal" data-target="#register">
+        <span class="glyphicon glyphicon-user"></span>
+        <span id="registText">注册</span>
+      </a>
+    </div>
+    <!-- 注册 -->
+    <div id="register" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
           </div>
-          <div class="form-group help">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="密　码">
-            <i class="fa fa-lock"></i>
-            <a href="#" class="fa fa-question-circle"></a>
+          <div class="modal-title">
+            <h1 class="text-center">注册</h1>
           </div>
-          <div class="form-group">
-            <div class="main-checkbox">
-              <input type="checkbox" value="None" id="checkbox1" name="check">
-              <label for="checkbox1"></label>
-            </div>
-            <span class="text">记住密码</span>
-            <button type="submit" class="btn btn-default">登录</button>
+          <div class="modal-body">
+            <form class="form-group" action>
+              <div class="form-group">
+                <label for>用户名</label>
+                <input class="form-control" type="text" placeholder="6-15位字母或数字">
+              </div>
+              <div class="form-group">
+                <label for>密码</label>
+                <input class="form-control" type="password" placeholder="至少6位字母或数字">
+              </div>
+              <div class="form-group">
+                <label for>再次输入密码</label>
+                <input class="form-control" type="password" placeholder="至少6位字母或数字">
+              </div>
+              <div class="form-group">
+                <label for>邮箱</label>
+                <input class="form-control" type="email" placeholder="例如:***@***.com">
+              </div>
+              <div class="text-right">
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  style="background-color: #3a8cd2b3;border: 0px solid transparent;"
+                >提交</button>
+                <button
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                  style="background-color: #fb5e5999;border: 0px solid transparent;"
+                >取消</button>
+              </div>
+              <a href data-toggle="modal" data-dismiss="modal" data-target="#login">
+                <font style="font-size: 13px;">已有账号？点我登录</font>
+              </a>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
+    <!-- 注册 end-->
+    <!-- 登录 -->
+    <div id="login" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-title">
+            <h1 class="text-center">登录</h1>
+          </div>
+          <div class="modal-body">
+            <form class="form-group" action>
+              <div class="form-group">
+                <label for>用户名</label>
+                <input class="form-control" type="text" placeholder>
+              </div>
+              <div class="form-group">
+                <label for>密码</label>
+                <input class="form-control" type="password" placeholder>
+              </div>
+              <div class="text-right">
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  style="background-color: #3a8cd2b3; border: 0px solid transparent;"
+                >登录</button>
+                <button
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                  style="background-color: #fb5e5999;border: 0px solid transparent;"
+                >取消</button>
+              </div>
+              <a href data-toggle="modal" data-dismiss="modal" data-target="#register">
+                <font style="font-size: 13px;">还没有账号？点我注册</font>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <h1>欢迎登录!</h1>
+        <p>qaq</p>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -34,131 +121,5 @@ export default {
 </script>
 
 <style>
-.form-bg {
-  background: #00b4ef;
-}
-.form-horizontal {
-  background: #fff;
-  padding-bottom: 40px;
-  border-radius: 15px;
-  text-align: center;
-}
-.form-horizontal .heading {
-  display: block;
-  font-size: 35px;
-  font-weight: 700;
-  padding: 35px 0;
-  border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 30px;
-}
-.form-horizontal .form-group {
-  padding: 0 40px;
-  margin: 0 0 25px 0;
-  position: relative;
-}
-.form-horizontal .form-control {
-  background: #f0f0f0;
-  border: none;
-  border-radius: 20px;
-  box-shadow: none;
-  padding: 0 20px 0 45px;
-  height: 40px;
-  transition: all 0.3s ease 0s;
-}
-.form-horizontal .form-control:focus {
-  background: #e0e0e0;
-  box-shadow: none;
-  outline: 0 none;
-}
-.form-horizontal .form-group i {
-  position: absolute;
-  top: 12px;
-  left: 60px;
-  font-size: 17px;
-  color: #c8c8c8;
-  transition: all 0.5s ease 0s;
-}
-.form-horizontal .form-control:focus + i {
-  color: #00b4ef;
-}
-.form-horizontal .fa-question-circle {
-  display: inline-block;
-  position: absolute;
-  top: 12px;
-  right: 60px;
-  font-size: 20px;
-  color: #808080;
-  transition: all 0.5s ease 0s;
-}
-.form-horizontal .fa-question-circle:hover {
-  color: #000;
-}
-.form-horizontal .main-checkbox {
-  float: left;
-  width: 20px;
-  height: 20px;
-  background: #11a3fc;
-  border-radius: 50%;
-  position: relative;
-  margin: 5px 0 0 5px;
-  border: 1px solid #11a3fc;
-}
-.form-horizontal .main-checkbox label {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-.form-horizontal .main-checkbox label:after {
-  content: "";
-  width: 10px;
-  height: 5px;
-  position: absolute;
-  top: 5px;
-  left: 4px;
-  border: 3px solid #fff;
-  border-top: none;
-  border-right: none;
-  background: transparent;
-  opacity: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.form-horizontal .main-checkbox input[type="checkbox"] {
-  visibility: hidden;
-}
-.form-horizontal .main-checkbox input[type="checkbox"]:checked + label:after {
-  opacity: 1;
-}
-.form-horizontal .text {
-  float: left;
-  margin-left: 7px;
-  line-height: 20px;
-  padding-top: 5px;
-  text-transform: capitalize;
-}
-.form-horizontal .btn {
-  float: right;
-  font-size: 14px;
-  color: #fff;
-  background: #00b4ef;
-  border-radius: 30px;
-  padding: 10px 25px;
-  border: none;
-  text-transform: capitalize;
-  transition: all 0.5s ease 0s;
-}
-@media only screen and (max-width: 479px) {
-  .form-horizontal .form-group {
-    padding: 0 25px;
-  }
-  .form-horizontal .form-group i {
-    left: 45px;
-  }
-  .form-horizontal .btn {
-    padding: 10px 20px;
-  }
-}
+
 </style>

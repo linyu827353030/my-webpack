@@ -1,22 +1,69 @@
 <template>
   <div class="contanier">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-success">这一年怎么怎么</li>
-      <li class="list-group-item list-group-item-info">这二年怎么怎么</li>
-      <li class="list-group-item list-group-item-warning">这三年怎么怎么</li>
-      <li class="list-group-item list-group-item-danger">这四年怎么怎么</li>
-    </ul>
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-success">不晓得写什么</a>
-      <a href="#" class="list-group-item list-group-item-info">不晓得写什么</a>
-      <a href="#" class="list-group-item list-group-item-warning">不晓得写什么</a>
-      <a href="#" class="list-group-item list-group-item-danger">专业代做作业</a>
-    </div>
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-success">各种期末作业</a>
-      <a href="#" class="list-group-item list-group-item-info">更专业</a>
-      <a href="#" class="list-group-item list-group-item-warning">白菜价</a>
-      <a href="#" class="list-group-item list-group-item-danger">包过</a>
+    <div class="container">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">3-3-3-3栅栏布局</div>
+          <div class="panel-body">
+            <p>...</p>
+          </div>
+
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item">凄凄切切群群群群群群</li>
+            <li class="list-group-item">呜呜呜呜呜呜呜呜无</li>
+            <li class="list-group-item">啧啧啧啧啧啧做做做</li>
+            <li class="list-group-item">少时诵诗书所所所所所</li>
+            <li class="list-group-item">哒哒哒哒哒哒多多多多多多</li>
+            <li class="list-group-item">斤斤计较军军军军军军军军军</li>
+            <li class="list-group-item">不不不不不不不不不不</li>
+            <li class="list-group-item">么么么么么么么木木</li>
+            <li class="list-group-item">斤斤计较军军军军军军军军</li>
+            <li class="list-group-item">啪啪啪啪啪啪铺铺铺铺</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h2>关于抖一抖</h2>
+
+        <p>如果你有大量的设置为 inline 属性的标签全部放在一个较窄的容器元素内，在页面上展示这些标签就会出现问题，每个标签就会有自己的一个 inline-block 元素（就像图标一样）。解决的办法是为每个标签都设置为 display: inline-block; 属性。关于这个问题以及实例，请参考 #13219 。</p>
+        <input class="btn btn-default" type="button" value="更多  »">
+        <h2>关于抖一抖2</h2>
+
+        <p>如果你有大量的设置为 inline 属性的标签全部放在一个较窄的容器元素内，在页面上展示这些标签就会出现问题，每个标签就会有自己的一个 inline-block 元素（就像图标一样）。解决的办法是为每个标签都设置为 display: inline-block; 属性。关于这个问题以及实例，请参考 #13219 。</p>
+        <input class="btn btn-default" type="button" value="更多  »">
+      </div>
+      <div class="col-md-3">
+        <h2>关于抖一抖3</h2>
+        <p>如果你有大量的设置为 inline 属性的标签全部放在一个较窄的容器元素内，在页面上展示这些标签就会出现问题，每个标签就会有自己的一个 inline-block 元素（就像图标一样）。解决的办法是为每个标签都设置为 display: inline-block; 属性。关于这个问题以及实例，请参考 #13219 。</p>
+        <input class="btn btn-default" type="button" value="更多  »">
+        <h2>关于抖一抖4</h2>
+        <p>如果你有大量的设置为 inline 属性的标签全部放在一个较窄的容器元素内，在页面上展示这些标签就会出现问题，每个标签就会有自己的一个 inline-block 元素（就像图标一样）。解决的办法是为每个标签都设置为 display: inline-block; 属性。关于这个问题以及实例，请参考 #13219 。</p>
+        <input class="btn btn-default" type="button" value="更多  »">
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">3-3-3-3栅栏布局</div>
+          <div class="panel-body">
+            <p>...</p>
+          </div>
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item">凄凄切切群群群群群群</li>
+            <li class="list-group-item">呜呜呜呜呜呜呜呜无</li>
+            <li class="list-group-item">啧啧啧啧啧啧做做做</li>
+            <li class="list-group-item">少时诵诗书所所所所所</li>
+            <li class="list-group-item">哒哒哒哒哒哒多多多多多多</li>
+            <li class="list-group-item">斤斤计较军军军军军军军军军</li>
+            <li class="list-group-item">不不不不不不不不不不</li>
+            <li class="list-group-item">么么么么么么么木木</li>
+            <li class="list-group-item">斤斤计较军军军军军军军军</li>
+            <li class="list-group-item">啪啪啪啪啪啪铺铺铺铺</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
